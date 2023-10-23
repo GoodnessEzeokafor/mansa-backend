@@ -75,12 +75,18 @@ export class DealServices implements OnApplicationShutdown {
       } else {
         response = await this.data.deal.findAllWithPagination(
           _.omit(cleaned, ['q']),
+          // { relationFields: ['company'] },
         );
       }
 
       const data = response.data;
       const pagination = response.pagination;
-
+      for (let i = 0; i < data.length; i++) {
+        const company = await this.data.company.findOne({
+          id: data[i].company,
+        });
+        data[i].company = company;
+      }
       return this.utils.success200Response({
         message: 'Retrieved successfully',
         data,
