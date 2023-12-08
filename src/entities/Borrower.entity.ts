@@ -1,0 +1,31 @@
+export class BorrowerEntity {
+  id: number;
+  fullName: string;
+  email: string;
+  role: string;
+  linkedin: string;
+  companyName: string;
+  tin: number;
+  website: string;
+  companyLinkedin: string;
+  companyEntity: string;
+  companyOverview: string;
+  companyYearFounded: string;
+  companySize: string;
+  companyFundingStage: string;
+  companyRegion: string;
+  companyRunway: string;
+  haveAnyDebtFacilities: string;
+  companyOriginatingLoan: string;
+  companyDpd: string;
+  companyUnderlyingAssets: string;
+  companyTotalVolumneOriginatedToDate: string;
+  companyTotalVolumeOriginatedInTheLastTwelveMonths: string;
+  companyAverageLoanSizeInTheLastTwelveMonths: string;
+  companyAverageAnnualEffectiveInterestRateInTheLastTwelveMonths: string;
+  companyAverageLoanTermInTheLastTwelveMonths: string;
+  companyPreferredLoanTerm: string;
+  companyAverageNPLNinetyDaysInTheLastTwelveMonths: string;
+  companyDeckOrWhitepaper: string;
+  companyLinkToBrandAssets: string;
+}
