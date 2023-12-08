@@ -1,3 +1,4 @@
+import { ActivityServicesModule } from './activity/activity.module';
 import { AdminAuthServicesModule } from './admin-auth/admin-auth.module';
 import { CompanyServicesModule } from './company/company.module';
 import { DatabaseServicesModule } from './database/typeorm/database-services.module';
@@ -10,4 +11,5 @@ export default [
   AdminAuthServicesModule,
   CompanyServicesModule,
   DealServicesModule,
+  ActivityServicesModule,
 ];

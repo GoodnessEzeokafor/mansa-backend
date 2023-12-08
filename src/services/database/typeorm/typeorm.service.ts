@@ -6,6 +6,7 @@ import { Admin } from './models/Admin';
 import { Company } from './models/Company';
 import { Deal } from './models/Deal';
 import { TypeOrmGenericRepository } from './typeorm-generic-repository.service';
+import { Activity } from './models/Activity';
 
 @Injectable()
 export class TypeOrmDatabaseServices
@@ -15,6 +16,7 @@ export class TypeOrmDatabaseServices
   admin: TypeOrmGenericRepository<Admin>;
   company: TypeOrmGenericRepository<Company>;
   deal: TypeOrmGenericRepository<Deal>;
+  activities: TypeOrmGenericRepository<Activity>;
 
   constructor(private connection: DataSource) {}
 
@@ -29,5 +31,9 @@ export class TypeOrmDatabaseServices
       Company,
     );
     this.deal = new TypeOrmGenericRepository<Deal>(this.connection, Deal);
+    this.activities = new TypeOrmGenericRepository<Activity>(
+      this.connection,
+      Activity,
+    );
   }
 }
