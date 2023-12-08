@@ -9,16 +9,15 @@
 1. PRs detail examples before committing
 
 
-### Issue
-* QA engineer can't test phone verification because twilo not sending sms on staging
+    #### Issue
+    * QA engineer can't test phone verification because twilo not sending sms on staging
 
-### What has changed:
-1. Changed line 97 on utils.js file
-2. restricted sending of sms to just staging and production
+    #### What has changed:
+    1. Changed line 97 on utils.js file
+    2. restricted sending of sms to just staging and production
 
-### What reviewers should know:
-* used the ternary expression
-
+    #### What reviewers should know:
+    * used the ternary expression
 
 ---
 
@@ -45,3 +44,9 @@ The above is simplified in this table:
 | Bug fixes       | fix/branch-name   | `fix:summary-of-fix`   |
 | Code cleanup    | chore/branch-name | `chore:commit-message` |
 | Code deployment    | deployment/branch-name | `deployment:commit-message` |
+
+
+---
+
+## Run Server 
+* npm run start:dev
